@@ -1,8 +1,8 @@
 .ekabaathui {
-  max-width: 900px;
-  height: 450px;
-  margin: 20px auto;
-  position: relative;
+  width: 100%;
+  height: 100%; 
+  margin: 0px;
+  position: absolute;
 }
 .slide1,.slide2,.slide3,.slide4 {
   position: absolute;
@@ -10,29 +10,32 @@
   height: 100%;
 }
 .slide1 {
-  background: url(https://emailholidays.com/wp-content/uploads/jw-marriott-orlando-grande-lakes.jpg)no-repeat center;
-      background-size: cover;
-    animation:fade 11s infinite;
--webkit-animation:fade 11s infinite;
+ background-image: url(../images/flower.jpg);
+ background-size: 100% 230%;
+ background-repeat: no-repeat;
+
+ background-position: center center;
+    animation:fade 20s infinite;
+-webkit-animation:fade 20s infinite;
 
 } 
 .slide2 {
   background: url(http://www.grandelakes.com/images/home/gl-home-1.jpg)no-repeat center;
       background-size: cover;
-    animation:fade2 11s infinite;
--webkit-animation:fade2 11s infinite;
+    animation:fade2 15s infinite;
+-webkit-animation:fade2 15s infinite;
 }
 .slide3 {
     background: url(http://www.cfmedia.vfmleonardo.com/imageRepo/4/0/59/344/933/new_JWMORLD_00161_S.jpg)no-repeat center;
       background-size: cover;
-    animation:fade3 11s infinite;
--webkit-animation:fade3 11s infinite;
+    animation:fade3 15s infinite;
+-webkit-animation:fade3 15s infinite;
 }
 .slide4 {
     background: url(http://floridabuzzreport.com/wp-content/uploads/2014/05/TurnberryIsle.jpg)no-repeat center;
       background-size: cover;
-    animation:fade3 11s infinite;
--webkit-animation:fade3 11s infinite;
+    animation:fade3 15s infinite;
+-webkit-animation:fade3 15s infinite;
 }
 @keyframes fade
 {
