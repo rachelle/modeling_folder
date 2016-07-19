@@ -1,67 +1,24 @@
-.ekabaathui {
+body {
+  font-family: A2 Regular, Open Sans;
+}
+.photo-content { 
+  width: 708px;
+  margin: 0;
+  padding: 0;
+  height: 500px;
+}
+
+.row { 
+
+  font-size: 0px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  height: 100%; 
-  margin: 0px;
-  position: absolute;
-}
-.slide1,.slide2,.slide3,.slide4 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.slide1 {
-  background-image: url(../images/flower.jpg);
-  background-size: 100% 230%;
-  background-repeat: no-repeat;
-  background-position: center center;
-    animation:fade 15s infinite;
-    -webkit-animation:fade 15s infinite;
-} 
+  }
 
-.slide2 {
-  background-image: url(../images/studio.jpg); 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-    animation:fade2 15s infinite;
-    -webkit-animation:fade2 15s infinite;
-}
-
-.slide3 {
-  background-image: url(../images/orange.jpg); 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-    animation:fade3 15s infinite;
-    -webkit-animation:fade3 15s infinite;
-}
-
-.slide4 {
-  background-image: url(../images/era.jpg); 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  animation:fade3 15s infinite;
-  -webkit-animation:fade3 15s infinite;
-}
-
-@keyframes fade {
-  0%   {opacity:1}
-  33.333% { opacity: 0}
-  66.666% { opacity: 0}
-  100% { opacity: 1}
-}
-
-@keyframes fade2  {
-  0%   {opacity:0}
-  33.333% { opacity: 1}
-  66.666% { opacity: 0 }
-  100% { opacity: 0}
-}
-
-@keyframes fade3  {
-  0%   {opacity:0}
-  33.333% { opacity: 0}
-  66.666% { opacity: 1}
-  100% { opacity: 0}
-}
+.div { 
+ width: 100%;
+ padding: 0;
+ display: inline-block;
+ margin: 0;}

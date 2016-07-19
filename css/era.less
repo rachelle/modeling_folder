@@ -1,0 +1,153 @@
+// mixins & variables
+@numberOfSlides: 4;
+
+.call-generate-selected-dot(){
+  .generate-selected-dot(@numberOfSlides);
+  .generate-selected-dot(@n, @i: 1) when (@i =< @n) {
+    &#amg-button_@{i}:checked~label[for=~'amg-button_@{i}'] {
+      background-color: rgba(100, 100, 100, 1);
+     }
+    .generate-selected-dot(@numberOfSlides, (@i + 1));
+  };
+};
+
+.call-generate-slide-positions(){
+  .generate-slide-positions(@numberOfSlides);
+  .generate-slide-positions(@n, @i: 1) when (@i =< @n) {
+    &#amg-button_@{i}:checked~#amg-slideshow>ul {
+      left: (@i - 1) * -100%;
+    }
+    .generate-slide-positions(@numberOfSlides, (@i + 1));
+  };
+}
+
+.call-generate-dot-position() {
+  .generate-dot-position(@numberOfSlides);
+  .generate-dot-position(@n, @i: 1) when (@i =< @n) {
+    &[for=~'amg-button_@{i}'] {
+      margin-left: ((@i - 1) * 18px) - (@numberOfSlides * 18px / 2)
+    }
+    .generate-dot-position(@numberOfSlides, (@i + 1));
+  };
+};
+
+.call-generate-right-arrows() {
+  .generate-right-arrows(@numberOfSlides);
+  .generate-right-arrows(@n, @i: 1) when (@i =< @n) {
+    @j: @i + 1;
+    &#amg-button_@{i}:checked~.amg-arrow#amg-arrow_@{j} {
+      right: 10px;
+      display: block;
+    }
+    .generate-right-arrows(@numberOfSlides, (@j));
+  };
+}
+.call-generate-left-arrows() {
+  .generate-left-arrows(@numberOfSlides);
+  .generate-left-arrows(@n, @i: 1) when (@i =< @n) {
+    @j: @i + 1;
+    &#amg-button_@{j}:checked~.amg-arrow#amg-arrow_@{i} {
+      left: 10px;
+      display: block;
+      transform: scale(-1);
+    }
+    .generate-left-arrows(@numberOfSlides, (@j));
+  };
+}
+
+// Standard stuff
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #616161;
+}
+
+// Component Styles
+#amg-slideshow-wrap {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  
+  input[type=radio] {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    z-index: 100;
+    visibility: hidden;
+    
+    .call-generate-selected-dot();
+    .call-generate-slide-positions();
+    .call-generate-right-arrows();
+    .call-generate-left-arrows();
+  }
+  label {
+    &:not(.amg-arrow) {
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      z-index: 100;
+      width: 12px;
+      height: 12px;
+      background-color: rgba(200, 200, 200, 1);
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0px 0px 3px rgba(0, 0, 0, .8);
+      transition: background-color .2s;
+      
+      .call-generate-dot-position();
+    }
+    
+    &.amg-arrow {
+      font-size: 25px;
+      color: rgb(255, 255, 240);
+      position: absolute;
+      top: 50%;
+      margin-top: -25px;
+      width: 40px;
+      text-align: right;
+      display: none;
+      opacity: 0.7;
+      cursor: pointer;
+      z-index: 1000;
+      background-color: transparent;
+      transition: opacity .2s;
+      text-shadow: 0px 0px 3px rgba(0, 0, 0, .8);
+      &:hover {
+        opacity: 1
+      }
+      &:active {
+        margin-top: -24px
+      }
+    }
+  }
+}
+
+#amg-slideshow {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+  position: relative;
+  >ul {
+    list-style: none;
+    height: 100%;
+    width: @numberOfSlides * 100%;
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
+    >li {
+      width: 100% / @numberOfSlides;
+      float: left;
+      position: relative;
+      >img {
+        margin: auto;
+        width: 100%;
+      }
+    }
+  }
+}
