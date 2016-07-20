@@ -1,24 +1,136 @@
 body {
   font-family: A2 Regular, Open Sans;
 }
+
 .photo-content { 
-  width: 708px;
+  width: 700px;
   margin: 0;
   padding: 0;
   height: 500px;
 }
 
-.row { 
+h1 { 
+  color: white;
+}
 
+.row { 
   font-size: 0px;
+  background-color: black;
   display: inline-block;
   margin: 0;
   padding: 0;
   width: 100%;
-  }
+}
 
 .div { 
- width: 100%;
- padding: 0;
- display: inline-block;
- margin: 0;}
+  width: 100%;
+  padding: 0;
+  display: inline-block;
+  margin: 0;
+}
+
+/**/
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+figure.snip1158 {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 0px ;
+  min-width: 715px;
+  max-width: 715px;
+  display: inline-block;
+  max-height: 500px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  pointer: cursor;
+}
+figure.snip1158 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+figure.snip1158 img {
+  opacity: 0.7;
+  max-width: 100%;
+}
+figure.snip1158:after {
+  background: #000000;
+  width: 0;
+  height: 6px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+figure.snip1158 figcaption {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  padding: 0 30px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+figure.snip1158 h2,
+figure.snip1158 span {
+  margin: 0;
+  width: 100%;
+}
+figure.snip1158 h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+figure.snip1158 span {
+  color: #e6e6e6;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+figure.snip1158 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+figure.snip1158.blue:after {
+  background-color: #2980b9;
+}
+figure.snip1158.blue span {
+  color: #409ad5;
+}
+figure.snip1158.red:after {
+  background-color: #c0392b;
+}
+figure.snip1158.red span {
+  color: #d65548;
+}
+figure.snip1158.yellow:after {
+  background-color: #f39c12;
+}
+figure.snip1158.yellow span {
+  color: #f5b043;
+}
+figure.snip1158.green:after {
+  background-color: #27ae60;
+}
+figure.snip1158.green span {
+  color: #36d278;
+}
+figure.snip1158:hover img,
+figure.snip1158.hover img {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+figure.snip1158:hover:after,
+figure.snip1158.hover:after {
+  width: 100%;
+}
