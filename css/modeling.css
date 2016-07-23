@@ -1,5 +1,23 @@
 body {
   font-family: A2 Regular, Open Sans;
+  padding: 0;
+  margin: 0;
+
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+     
+.header { 
+  padding-top: 20px;
+}
+
+.sub-header { 
+  padding-top: 5px;
 }
 
 .photo-content { 
@@ -15,7 +33,7 @@ h1 {
 
 .row { 
   font-size: 0px;
-  background-color: black;
+
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -133,4 +151,65 @@ figure.snip1158.hover img {
 figure.snip1158:hover:after,
 figure.snip1158.hover:after {
   width: 100%;
+}
+
+.vertically-centered { 
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.content-title { 
+  color: #1CBAC8;
+  text-align: center;
+  margin-top: 50px; 
+}
+
+.contact-side { 
+  background-color: black;
+}
+
+.contact-content {
+  background-color: #F5F5F5;
+  font-color: black;
+}
+
+
+.contact-icon { 
+  width: 45px;
+  height: 45px;
+}
+
+span { 
+  font-size: 18px;
+  padding-left: 10px;
+
+}
+
+
+h5 { 
+  text-align: center;
+  font-size: 25px;
+}
+
+a.contact-link { 
+  text-decoration: none;
+  color: black;
+}
+
+.contact-link:hover { 
+  color: #1CBAC8;
+}
+
+.parallax-container { 
+  height: 320px;
+  bottom: 0;
+}
+
+.aboutme-content { 
+  font-color: black;
+  text-align: center;
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: white;
+  padding-bottom: 50px;
 }

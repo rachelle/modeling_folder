@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+  $('.parallax').parallax();
   /* Side Nav Collapse */
   $(".button-collapse").sideNav(); 
 
